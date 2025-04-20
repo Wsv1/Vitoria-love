@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    background-image: url('images\ html\ love.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+label {
+    background-color: #ff99cc;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+label:hover {
+    background-color: #ff66a3;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.mensagem {
+    display: none;
+    font-size: 1.2rem;
+    color: #99004d;
+    animation: fadeIn 2s ease;
+}
+
+#op1:checked ~ .respostas #msg1,
+#op2:checked ~ .respostas #msg2,
+#op3:checked ~ .respostas #msg3,
+#op4:checked ~ .respostas #msg4 {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
